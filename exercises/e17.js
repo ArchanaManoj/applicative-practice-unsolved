@@ -10,11 +10,29 @@
 
 export function minBy(array, cb) {
   // Your code goes here...
+  let minValArray = array[0];
+
+  for(let item of array) {
+
+    if(cb(item) < cb(minValArray)) {
+      minValArray = item;
+    }
+  }
+    return minValArray;
 
 }
 
 export function maxBy(array, cb) {
   // Your code goes here...
+  let maxValArray = array[0];
+
+  for(let item of array) {
+
+    if(cb(item) > cb(maxValArray)) {
+      maxValArray = item;
+    }
+  }
+    return maxValArray;
 
 }
 

@@ -6,6 +6,10 @@ import { data } from "../data/data";
 
 export function getPlanetsNamesWithMoons(data) {
   // Your code goes here...
+  let arrPlanets = data.planets.filter((n => n.moons))
+  .map(p => p.name);
+
+  return arrPlanets;
 }
 
 
