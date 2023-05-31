@@ -12,17 +12,13 @@
 export function find(array, callback) {
   // Your code goes here...
 
-  let newArray = [];
-
-  for(let item of array) {
-    if(callback(item)) {
-      newArray.push(item);
+  for (let item of array) {
+    if (callback(item)) {
+      return item;
       break;
-    } 
+    }
   }
 
-  return newArray[0];
-  
 }
 
 
