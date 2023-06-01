@@ -6,8 +6,10 @@ import { data } from "../data/data";
 
 export function getAsteroidDataByName(data, asteroidName) {
   // Your code goes here...
-  return Object.assign({}, data.asteroids
-    .filter(asteroid => asteroid.name.includes(asteroidName) ? asteroid : null)[0]);
+
+  return data.asteroids
+    .find(asteroid => asteroid.name === asteroidName);
+
 }
 
 
